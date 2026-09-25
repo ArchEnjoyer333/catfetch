@@ -13,7 +13,7 @@ You don't need an active AUR connection to build this package like a native Arch
 
 ```bash
 # 1. Clone this repository
-git clone https://github.com
+git clone https://github.com/ArchEnjoyer333/catfetch.git
 cd catfetch
 
 # 2. Build and install via pacman automatically
@@ -25,7 +25,7 @@ If you prefer installing via Cargo into your user binaries folder:
 
 ```bash
 # 1. Clone and enter the directory
-git clone https://github.com
+git clone https://github.com/ArchEnjoyer333/catfetch.git
 cd catfetch
 
 # 2. Compile and install into ~/.cargo/bin/

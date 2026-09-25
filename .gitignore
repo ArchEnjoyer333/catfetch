@@ -1,0 +1,13 @@
+/target/
+.cargo/
+/pkg/
+*.pkg.tar.zst
+*.pkg.tar.xz
+*.tar.gz
+Thumbs.db
+.DS_Store
+*.log
+.DS_Store?
+.vscode/
+.idea/
+*.swp

@@ -1,4 +1,5 @@
 # catfetch 🐾
+<img width="807" height="337" alt="image" src="https://github.com/user-attachments/assets/ec4df03b-aa83-401c-8fee-a9ad7ee9e549" />
 
 A minimalist, lightweight CLI system information fetch utility written in Rust. It displays clean system stats alongside random cat facts and pixel-art logos. Optimized to perfectly fit narrow terminal screens.
 

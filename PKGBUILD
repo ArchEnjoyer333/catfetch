@@ -8,9 +8,7 @@ url="https://github.com/ArchEnjoyer333/catfetch"
 license=('MIT')
 depends=('gcc-libs')
 makedepends=('cargo' 'git')
-
-# Собираем напрямую из мастера твоего репозитория
-source=("git+https://github.com")
+source=("$pkgname::git+https://github.com/ArchEnjoyer333/catfetch.git#branch=master")
 sha256sums=('SKIP')
 
 build() {

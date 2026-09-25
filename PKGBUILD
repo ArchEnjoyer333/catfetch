@@ -1,34 +1,31 @@
-# Maintainer: Your Name <youremail@example.com>
+# Maintainer: ArchEnjoyer333 <https://github.com/ArchEnjoyer333>
 pkgname=catfetch
-pkgver=0.1.2
+pkgver=0.1.0
 pkgrel=1
-pkgdesc="A minimalist CLI cat fetch utility with system info and facts"
+pkgdesc="A minimalist CLI cat fetch utility with system info and random facts"
 arch=('x86_64')
-url="https://github.com"
+url="https://github.com/ArchEnjoyer333/catfetch"
 license=('MIT')
 depends=('gcc-libs')
-makedepends=('cargo')
+makedepends=('cargo' 'git')
 
-# Оставляем массив пустым, так как собираем из локальной папки напрямую
-source=()
-md5sums=()
+# Собираем напрямую из мастера твоего репозитория
+source=("git+https://github.com")
+sha256sums=('SKIP')
 
 build() {
-  # Переходим в директорию, где лежит стартовый Cargo.toml (корень проекта)
-  cd "$startdir"
+  cd "$srcdir/$pkgname"
   cargo build --release --frozen
 }
 
 package() {
-  cd "$startdir"
+  cd "$srcdir/$pkgname"
   
-  # 1. Установка скомпилированного бинарника в системный /usr/bin
+  # Установка бинарника
   install -Dm755 "target/release/$pkgname" "$pkgdir/usr/bin/$pkgname"
   
-  # 2. Установка глобальных ресурсов в /usr/share/catfetch
+  # Установка ресурсов
   install -Dm644 "cats.toml" "$pkgdir/usr/share/$pkgname/cats.toml"
-  
-  # Копируем всю папку с png-картинками
   mkdir -p "$pkgdir/usr/share/$pkgname/logo"
   cp -r logo/*.png "$pkgdir/usr/share/$pkgname/logo/"
   chmod 644 "$pkgdir/usr/share/$pkgname/logo/"*

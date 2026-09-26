@@ -9,7 +9,7 @@ A minimalist, lightweight CLI system information fetch utility written in Rust. 
 
 ## Installation
 
-### Method 1: Local PKGBUILD (Recommended for Arch Linux)
+### Method 1: Local PKGBUILD (Recommended for Arch Linux / CachyOS)
 You don't need an active AUR connection to build this package like a native Arch utility. Just clone the repo and use `makepkg`:
 
 ```bash
